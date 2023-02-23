@@ -25,10 +25,6 @@ use Symfony\Component\Translation\MessageCatalogue;
 // });
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/book', function () {
-        return view('dashboard.book');
-    });
-
     Route::get('/rent', function () {
         return view('dashboard.rent-log');
     });
@@ -41,14 +37,17 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware(['admin', 'admin:1'])->group(function () {
+    // Route data user
+        Route::get('/user', [AdminController::class, 'index'])->name('dashboard.index');
+        Route::delete('/user/{id}',[AdminController::class, 'destroy'])->name('dashboard.destroy');
+        Route::get('/user/{id}/edit',[AdminController::class,'editUser'])->name('user.editUser');
+        Route::put('/user/{id}/edit',[AdminController::class, 'update'])->name('dashboard.update');
+    // end Route data user
 
-    Route::get('/user', [AdminController::class, 'index'])->name('dashboard.index');
-
-    Route::delete('/user/{id}',[AdminController::class, 'destroy'])->name('dashboard.destroy');
-
-    Route::get('/user/{id}/edit',[AdminController::class,'editUser'])->name('user.editUser');
-
-    Route::put('/user/{id}/edit',[AdminController::class, 'update'])->name('dashboard.update');
+    // stat route data book
+        Route::post('/book',[AdminController::class, 'CreateBook'])->name('book.create');
+        Route::get('/book', [AdminController::class, 'books'])->name('dashboard.books');
+    // end route data book
 });
 
 Route::middleware(['auth'])->group(function () {

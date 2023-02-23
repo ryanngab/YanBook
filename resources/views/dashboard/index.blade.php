@@ -1,6 +1,7 @@
 @extends('dashboard.layouts.main')
 @section('title', 'Dashboard')
 @section('content')
+@include('dashboard.book.create')
 <h1>Halo {{ auth()->user()->name}} </h1>
 <div class="row my-5">
     <div class="col-lg-4">

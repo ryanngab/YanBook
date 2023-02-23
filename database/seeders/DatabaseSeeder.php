@@ -21,14 +21,14 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-    //  \App\Models\User::create([
-    //       name' => 'admin',
-            // 'email' => 'admin@gmail.com',
-            // 'password' => bcrypt('12007948'),
-            // 'phone' => '0859102724182',
-            // 'address' => 'Sukabumi',
-            // 'role_id' => 1
-    //  ]);
+     \App\Models\Book::create([
+        'book_code' => '3',
+        'title' => 'Hujan Bulan Juni',
+        'status' => 'in stok'
+     ]);
+
+    \App\Models\Book::factory(10)->create();
+
 
     }
 }

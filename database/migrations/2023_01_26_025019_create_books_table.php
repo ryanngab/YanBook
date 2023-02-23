@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('book_code')->unique();
             $table->string('title');
+            // $table->foreignId()
             $table->string('cover')->nullable();
             $table->string('status')->default('in stok');
             $table->timestamps();

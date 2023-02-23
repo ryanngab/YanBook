@@ -27,4 +27,25 @@ class isAdmin
         return $next($request);
     }
 
+    // isUser
+        //   public function handle(Request $request, Closure $next)
+        //  {
+        //      if(Auth::guest())
+        //      {
+        //          return redirect()->route('auth.login');
+        //      }
+        //      return $next($request);
+        //  }
+    // endUser
+
+    // isAdmin
+        // public function handle(Request $request, Closure $next)
+        // {
+        //     if(Auth::user() && Auth::user()->role_id == 1){
+        //     return $next($request);
+        //     }
+        //     return back()->with('your not admin');
+        // }
+    // endAdmin
+
 }

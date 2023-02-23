@@ -33,6 +33,9 @@ class RoleSeeder extends Seeder
         //     ]);
         // }
 
+    \App\Models\Book::factory(10)->create();
+
+
 
      \App\Models\User::create([
             'name' => 'admin',
@@ -50,6 +53,13 @@ class RoleSeeder extends Seeder
             'no_hp' => '08561276261',
             'address' => 'Sukabumi',
             'role_id' => 0
+     ]);
+
+    \App\Models\Book::create([
+        'book_code' => '3',
+        'title' => 'Hujan Bulan Juni',
+        'status' => 'in stok'
+        // 'category'
      ]);
     }
 }

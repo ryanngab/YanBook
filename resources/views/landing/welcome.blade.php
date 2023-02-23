@@ -16,8 +16,8 @@
     <nav class="navbar navbar-dark navbar-expand-lg " style="background-color: #7B8FA1">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/img/icon-1.png" alt="Logo" width="30" height="25" class="d-inline-block align-text-top ">
-                YanRents </a>
+                <img src="/img/icon-1.png" alt="Logo" width="50" height="50" class="d-inline-block ">
+                YanRents</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -97,7 +97,7 @@
     <div class="container" style="margin-top: 100px;">
         <div class="row">
             <div class="col-4">
-                <h2>Ryan Rents</h2>
+                <h2>YanBook</h2>
                 <a href="/register" class="btn btn-outline-primary">Ayo Daftar sekarang</a>
             </div>
             <div class="col-8">
